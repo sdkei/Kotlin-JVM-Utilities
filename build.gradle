@@ -21,3 +21,16 @@ compileKotlin {
 compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
+
+apply plugin: 'maven'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository url: "file://${rootDir}/docs"
+            pom.version = '0.0.0'
+            pom.groupId = 'io.github.sdkei'
+            pom.artifactId = 'sdkei-kotlin-jvm-utilities'
+        }
+    }
+}
