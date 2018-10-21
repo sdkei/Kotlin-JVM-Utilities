@@ -30,7 +30,7 @@ uploadArchives {
             repository url: "file://${rootDir}/docs"
             pom.version = '0.0.0'
             pom.groupId = 'io.github.sdkei'
-            pom.artifactId = 'sdkei-kotlin-jvm-utilities'
+            pom.artifactId = 'sdkei_kotlin_jvm_utils'
         }
     }
 }

@@ -1,4 +1,4 @@
-package io.github.sdkei.utilities.property
+package io.github.sdkei.kotlin_jvm_utils.property
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue

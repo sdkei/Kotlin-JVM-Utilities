@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.github.sdkei</groupId>
-  <artifactId>sdkei-kotlin-jvm-utilities</artifactId>
+  <artifactId>sdkei_kotlin_jvm_utils</artifactId>
   <version>0.0.0</version>
   <dependencies>
     <dependency>
