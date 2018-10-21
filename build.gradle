@@ -28,7 +28,7 @@ uploadArchives {
     repositories {
         mavenDeployer {
             repository url: "file://${rootDir}/docs"
-            pom.version = '0.0.0'
+            pom.version = '0.0.1'
             pom.groupId = 'io.github.sdkei'
             pom.artifactId = 'sdkei_kotlin_jvm_utils'
         }

@@ -3,10 +3,11 @@
   <groupId>io.github.sdkei</groupId>
   <artifactId>sdkei_kotlin_jvm_utils</artifactId>
   <versioning>
-    <release>0.0.0</release>
+    <release>0.0.1</release>
     <versions>
       <version>0.0.0</version>
+      <version>0.0.1</version>
     </versions>
-    <lastUpdated>20181021001646</lastUpdated>
+    <lastUpdated>20181021073153</lastUpdated>
   </versioning>
 </metadata>
