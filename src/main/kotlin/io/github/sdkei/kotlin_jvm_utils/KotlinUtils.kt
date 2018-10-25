@@ -17,11 +17,11 @@ inline fun <T> not(crossinline predicate: (T) -> Boolean): (T) -> Boolean =
  * An argument of [predicate] and [block] are `this`.
  *
  * ```
- * (-1).letIf({ it < 0 }) { 0 } // -> 0
- * 1.letIf({ it < 0 }) { 0 } // -> 1
+ * (-1).howeverIf({ it < 0 }) { 0 } // -> 0
+ * 1.howeverIf({ it < 0 }) { 0 } // -> 1
  * ```
  */
-inline fun <T> T.letIf(predicate: (T) -> Boolean, block: (T) -> T): T =
+inline fun <T> T.howeverIf(predicate: (T) -> Boolean, block: (T) -> T): T =
         if (predicate(this)) block(this)
         else this
 
@@ -32,9 +32,9 @@ inline fun <T> T.letIf(predicate: (T) -> Boolean, block: (T) -> T): T =
  * An argument of [predicate] and [block] are `this`.
  *
  * ```
- * (-1).letIfNot({ it >= 0 }) { 0 } // -> 0
- * 1.letIfNot({ it >= 0 }) { 0 } // -> 1
+ * (-1).howeverIfNot({ it >= 0 }) { 0 } // -> 0
+ * 1.howeverIfNot({ it >= 0 }) { 0 } // -> 1
  * ```
  */
-inline fun <T> T.letIfNot(crossinline predicate: (T) -> Boolean, block: (T) -> T): T =
-        letIf(not(predicate), block)
+inline fun <T> T.howeverIfNot(crossinline predicate: (T) -> Boolean, block: (T) -> T): T =
+        howeverIf(not(predicate), block)

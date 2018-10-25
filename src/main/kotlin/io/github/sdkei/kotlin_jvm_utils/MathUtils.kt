@@ -12,7 +12,7 @@ import kotlin.math.abs
  */
 infix fun Int.modPositive(divisor: Int): Int =
         (this % divisor)
-                .letIfNot({ it >= 0 }) { it + abs(divisor) }
+                .howeverIfNot({ it >= 0 }) { it + abs(divisor) }
 
 /**
  * Converts degree to radian.
@@ -32,6 +32,6 @@ fun Double.degToRad(): Double =
  * @return degree which is greater or equals than 0.0 and less than 360.0.
  */
 fun Double.radToDeg(): Double =
-        (this % (2.0 * PI)).letIf({ it < 0.0 }) {
+        (this % (2.0 * PI)).howeverIf({ it < 0.0 }) {
             it + 2.0 * PI
         } / PI * 180.0

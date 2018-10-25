@@ -13,13 +13,13 @@ class KotlinUtilsTest {
 
     @Test
     fun test_letIf() {
-        assertEquals(0, (-1).letIf({ it < 0 }) { 0 })
-        assertEquals(1, 1.letIf({ it < 0 }) { 0 })
+        assertEquals(0, (-1).howeverIf({ it < 0 }) { 0 })
+        assertEquals(1, 1.howeverIf({ it < 0 }) { 0 })
     }
 
     @Test
     fun test_letIfNot() {
-        assertEquals(0, (-1).letIfNot({ it >= 0 }) { 0 })
-        assertEquals(1, 1.letIfNot({ it >= 0 }) { 0 })
+        assertEquals(0, (-1).howeverIfNot({ it >= 0 }) { 0 })
+        assertEquals(1, 1.howeverIfNot({ it >= 0 }) { 0 })
     }
 }
