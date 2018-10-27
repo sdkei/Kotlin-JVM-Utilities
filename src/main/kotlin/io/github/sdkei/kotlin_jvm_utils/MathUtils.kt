@@ -15,6 +15,17 @@ infix fun Int.modPositive(divisor: Int): Int =
                 .howeverIfNot({ it >= 0 }) { it + abs(divisor) }
 
 /**
+ * Returns positive reminder.
+ *
+ * ```
+ * -1.0 modPositive 3.0 // -> 2.0 // Note: `-1.0 % 3.0` returns -1.0
+ * ```
+ */
+infix fun Double.modPositive(divisor: Double): Double =
+        (this % divisor)
+                .howeverIfNot({ it >= 0.0 }) { it + abs(divisor) }
+
+/**
  * Converts degree to radian.
  *
  * @return radian which is greater or equals than -1.0 * PI and less than 1.0 * PI.

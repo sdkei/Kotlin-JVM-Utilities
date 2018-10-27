@@ -7,34 +7,67 @@ import kotlin.math.PI
 class MathUtilsTest {
 
     @Test
-    fun test_modPositive() {
-        assertEquals(0, +6 modPositive +3); assertEquals(0, +6 % +3)
-        assertEquals(2, +5 modPositive +3); assertEquals(2, +5 % +3)
-        assertEquals(1, +4 modPositive +3); assertEquals(1, +4 % +3)
-        assertEquals(0, +3 modPositive +3); assertEquals(0, +3 % +3)
-        assertEquals(2, +2 modPositive +3); assertEquals(2, +2 % +3)
-        assertEquals(1, +1 modPositive +3); assertEquals(1, +1 % +3)
-        assertEquals(0, 0 modPositive +3); assertEquals(0, +0 % +3)
+    fun test_Int_modPositive() {
+        assertEquals(0, +6 modPositive +3); assertEquals(+0, +6 % +3)
+        assertEquals(2, +5 modPositive +3); assertEquals(+2, +5 % +3)
+        assertEquals(1, +4 modPositive +3); assertEquals(+1, +4 % +3)
+        assertEquals(0, +3 modPositive +3); assertEquals(+0, +3 % +3)
+        assertEquals(2, +2 modPositive +3); assertEquals(+2, +2 % +3)
+        assertEquals(1, +1 modPositive +3); assertEquals(+1, +1 % +3)
+        assertEquals(0, +0 modPositive +3); assertEquals(+0, +0 % +3)
         assertEquals(2, -1 modPositive +3); assertEquals(-1, -1 % +3)
         assertEquals(1, -2 modPositive +3); assertEquals(-2, -2 % +3)
-        assertEquals(0, -3 modPositive +3); assertEquals(0, -3 % +3)
+        assertEquals(0, -3 modPositive +3); assertEquals(+0, -3 % +3)
         assertEquals(2, -4 modPositive +3); assertEquals(-1, -4 % +3)
         assertEquals(1, -5 modPositive +3); assertEquals(-2, -5 % +3)
-        assertEquals(0, -6 modPositive +3); assertEquals(0, -6 % +3)
+        assertEquals(0, -6 modPositive +3); assertEquals(+0, -6 % +3)
 
-        assertEquals(0, +6 modPositive -3); assertEquals(0, +6 % -3)
-        assertEquals(2, +5 modPositive -3); assertEquals(2, +5 % -3)
-        assertEquals(1, +4 modPositive -3); assertEquals(1, +4 % -3)
-        assertEquals(0, +3 modPositive -3); assertEquals(0, +3 % -3)
-        assertEquals(2, +2 modPositive -3); assertEquals(2, +2 % -3)
-        assertEquals(1, +1 modPositive -3); assertEquals(1, +1 % -3)
-        assertEquals(0, 0 modPositive -3); assertEquals(0, 0 % -3)
+        assertEquals(0, +6 modPositive -3); assertEquals(+0, +6 % -3)
+        assertEquals(2, +5 modPositive -3); assertEquals(+2, +5 % -3)
+        assertEquals(1, +4 modPositive -3); assertEquals(+1, +4 % -3)
+        assertEquals(0, +3 modPositive -3); assertEquals(+0, +3 % -3)
+        assertEquals(2, +2 modPositive -3); assertEquals(+2, +2 % -3)
+        assertEquals(1, +1 modPositive -3); assertEquals(+1, +1 % -3)
+        assertEquals(0, +0 modPositive -3); assertEquals(+0, +0 % -3)
         assertEquals(2, -1 modPositive -3); assertEquals(-1, -1 % -3)
         assertEquals(1, -2 modPositive -3); assertEquals(-2, -2 % -3)
-        assertEquals(0, -3 modPositive -3); assertEquals(0, -3 % -3)
+        assertEquals(0, -3 modPositive -3); assertEquals(+0, -3 % -3)
         assertEquals(2, -4 modPositive -3); assertEquals(-1, -4 % -3)
         assertEquals(1, -5 modPositive -3); assertEquals(-2, -5 % -3)
-        assertEquals(0, -6 modPositive -3); assertEquals(0, -6 % -3)
+        assertEquals(0, -6 modPositive -3); assertEquals(+0, -6 % -3)
+    }
+
+    @Test
+    fun test_Double_modPositive() {
+        val delta = 0.0
+
+        assertEquals(0.0, +6.0 modPositive +3.0, delta); assertEquals(+0.0, +6.0 % +3.0, delta)
+        assertEquals(2.0, +5.0 modPositive +3.0, delta); assertEquals(+2.0, +5.0 % +3.0, delta)
+        assertEquals(1.0, +4.0 modPositive +3.0, delta); assertEquals(+1.0, +4.0 % +3.0, delta)
+        assertEquals(0.0, +3.0 modPositive +3.0, delta); assertEquals(+0.0, +3.0 % +3.0, delta)
+        assertEquals(2.0, +2.0 modPositive +3.0, delta); assertEquals(+2.0, +2.0 % +3.0, delta)
+        assertEquals(1.0, +1.0 modPositive +3.0, delta); assertEquals(+1.0, +1.0 % +3.0, delta)
+        assertEquals(0.0, +0.0 modPositive +3.0, delta); assertEquals(+0.0, +0.0 % +3.0, delta)
+        assertEquals(2.0, -1.0 modPositive +3.0, delta); assertEquals(-1.0, -1.0 % +3.0, delta)
+        assertEquals(1.0, -2.0 modPositive +3.0, delta); assertEquals(-2.0, -2.0 % +3.0, delta)
+        assertEquals(0.0, -3.0 modPositive +3.0, delta); assertEquals(+0.0, -3.0 % +3.0, delta)
+        assertEquals(2.0, -4.0 modPositive +3.0, delta); assertEquals(-1.0, -4.0 % +3.0, delta)
+        assertEquals(1.0, -5.0 modPositive +3.0, delta); assertEquals(-2.0, -5.0 % +3.0, delta)
+        assertEquals(0.0, -6.0 modPositive +3.0, delta); assertEquals(+0.0, -6.0 % +3.0, delta)
+
+        assertEquals(0.0, +6.0 modPositive -3.0, delta); assertEquals(+0.0, +6.0 % -3.0, delta)
+        assertEquals(2.0, +5.0 modPositive -3.0, delta); assertEquals(+2.0, +5.0 % -3.0, delta)
+        assertEquals(1.0, +4.0 modPositive -3.0, delta); assertEquals(+1.0, +4.0 % -3.0, delta)
+        assertEquals(0.0, +3.0 modPositive -3.0, delta); assertEquals(+0.0, +3.0 % -3.0, delta)
+        assertEquals(2.0, +2.0 modPositive -3.0, delta); assertEquals(+2.0, +2.0 % -3.0, delta)
+        assertEquals(1.0, +1.0 modPositive -3.0, delta); assertEquals(+1.0, +1.0 % -3.0, delta)
+        assertEquals(0.0, +0.0 modPositive -3.0, delta); assertEquals(+0.0, +0.0 % -3.0, delta)
+        assertEquals(2.0, -1.0 modPositive -3.0, delta); assertEquals(-1.0, -1.0 % -3.0, delta)
+        assertEquals(1.0, -2.0 modPositive -3.0, delta); assertEquals(-2.0, -2.0 % -3.0, delta)
+        assertEquals(0.0, -3.0 modPositive -3.0, delta); assertEquals(+0.0, -3.0 % -3.0, delta)
+        assertEquals(2.0, -4.0 modPositive -3.0, delta); assertEquals(-1.0, -4.0 % -3.0, delta)
+        assertEquals(1.0, -5.0 modPositive -3.0, delta); assertEquals(-2.0, -5.0 % -3.0, delta)
+        assertEquals(0.0, -6.0 modPositive -3.0, delta); assertEquals(+0.0, -6.0 % -3.0, delta)
     }
 
     @Test
