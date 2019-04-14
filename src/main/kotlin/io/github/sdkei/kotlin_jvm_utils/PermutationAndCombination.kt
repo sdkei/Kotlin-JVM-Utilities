@@ -4,7 +4,7 @@ package io.github.sdkei.kotlin_jvm_utils
  * Returns permutation of elements of the receiver.
  *
  * ```
- * listOf("A", "B", "C").permutation(3) // -> [[A, B, C], [A, C, B], [B, A, C], [B, C, A], [C, A, B], [C, B, A]]
+ * listOf("A", "B", "C").permutation(2) // -> [[A, B], [A, C], [B, A], [B, C], [C, A], [C, B]]
  * ```
  *
  * @param count number of elements of permutation.
